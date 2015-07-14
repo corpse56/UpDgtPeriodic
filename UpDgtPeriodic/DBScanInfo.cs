@@ -119,7 +119,7 @@ namespace UpDgtPeriodic
             da.SelectCommand.Connection = new SqlConnection();
             da.SelectCommand.Connection.ConnectionString = XmlConnections.GetConnection("/Connections/BJVVV");
             da.SelectCommand.CommandText = " select * from BookAddInf..DgtPeriodic  " +
-                                           " where PIN ='"+PIN+"'";
+                                           " where PIN ='"+PIN+"' and YEAR = '"+Year+"'";
             if (da.Fill(ds, "t") != 0)
             {
                 da = new SqlDataAdapter();
