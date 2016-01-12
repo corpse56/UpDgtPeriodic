@@ -238,6 +238,7 @@ namespace UpDgtPeriodic
             string store_ip = XmlConnections.GetConnection("/Connections/store_ip");
             string sTargetConnect = @"\\" + store_ip + @"\BookAddInf\PERIOD\";
             string sTarget = @"\\" + store_ip + @"\BookAddInf\PERIOD\";
+            string sTargetConnectBookAddInf = @"\\" + store_ip + @"\BookAddInf";
             DBScanInfo db = new DBScanInfo();
             string PIN = this.PIN;
             PIN = PINFormat(PIN);
@@ -257,7 +258,7 @@ namespace UpDgtPeriodic
             //fp.ResetProgress(Total, Number, Total);
             try
             {
-                CopyPDFToTarget(store_ip, sTarget, fPDF.DirectoryName,fPDF, Number, Total, fp);
+                CopyPDFToTarget(store_ip, sTarget, fPDF.DirectoryName, fPDF, Number, Total, fp, sTargetConnectBookAddInf);
 
             }
             catch (Exception ex)
@@ -302,7 +303,7 @@ namespace UpDgtPeriodic
 
         private string Package = "";
         private List<string> PackageList = new List<string>();
-        private void CopyPDFToTarget(string ip, string sTarget, string sSource, FileInfo fPDF, int number, int total, fProgress fp)
+        private void CopyPDFToTarget(string ip, string sTarget, string sSource, FileInfo fPDF, int number, int total, fProgress fp,string sTargetConnectBookAddInf)
         {
             DirectoryInfo diTarget = new DirectoryInfo(sTarget);
             DirectoryInfo diSource = new DirectoryInfo(sSource);
@@ -324,7 +325,7 @@ namespace UpDgtPeriodic
             }
             Package += fPDF.Name.Remove(fPDF.Name.LastIndexOf(".")) + ";";
             MagickReadSettings settings = new MagickReadSettings();
-            using (new NetworkConnection(sTarget, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
+            using (new NetworkConnection(sTargetConnectBookAddInf, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
             {
                 TargetFolder.Refresh();
             }
@@ -337,7 +338,7 @@ namespace UpDgtPeriodic
                 }
                 catch
                 {
-                    using (new NetworkConnection(sTarget, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
+                    using (new NetworkConnection(sTargetConnectBookAddInf, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
                     {
                         TargetFolder.Create();
                     }
@@ -393,7 +394,7 @@ namespace UpDgtPeriodic
                     }
                     catch
                     {
-                        using (new NetworkConnection(sTarget, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
+                        using (new NetworkConnection(sTargetConnectBookAddInf, new NetworkCredential(@"bj\DigitCentreWork01", "DigCW_01")))
                         {
                             images[0].ToBitmap().Save(fileTo);
                         }
@@ -411,6 +412,7 @@ namespace UpDgtPeriodic
                     }*/
                     //fp.IncProgress();
                     fp.IncProgress(total, i + 1, total);
+                    Application.DoEvents();
                     GC.Collect();
                 }
             }

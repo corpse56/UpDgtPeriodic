@@ -12,3 +12,16 @@ F:\projects\UpDgtPeriodic\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fAddJPGChoice.re
 F:\projects\UpDgtPeriodic\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fMain.resources
 F:\projects\UpDgtPeriodic\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fPreview.resources
 F:\projects\UpDgtPeriodic\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fPreviewPDF.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.exe
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.pdb
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\bin\Debug\UpDgtPeriodic.exe
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\bin\Debug\UpDgtPeriodic.pdb
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\bin\Debug\XMLConnections.pdb
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\ResolveAssemblyReference.cache
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fAddJPGChoice.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fMain.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fLogin.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fPreview.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.Properties.Resources.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.fPreviewPDF.resources
+F:\projects\UpDgtPeriodic\git\trunk\UpDgtPeriodic\obj\Debug\UpDgtPeriodic.csproj.GenerateResource.Cache
